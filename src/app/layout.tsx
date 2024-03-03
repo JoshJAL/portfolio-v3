@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/header/Header';
+import { Suspense } from 'react';
+import Loading from './loading';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,7 +21,9 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Header />
-        <main className='w-full flex flex-col max-w-7xl mx-auto p-5 md:pt-36 pb-32 md:pb-5'>{children}</main>
+        <Suspense fallback={<Loading />}>
+          <main className='w-full flex flex-col max-w-7xl mx-auto p-5 md:pt-36 pb-32 md:pb-5'>{children}</main>
+        </Suspense>
       </body>
     </html>
   );
