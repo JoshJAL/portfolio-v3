@@ -38,8 +38,7 @@ export default function Example() {
       break;
     case 'school':
       image = School;
-      title =
-        'Like most people I feltLike most people I felt very lost and did not know what I wanted to do, but *spoilers* it was not law';
+      title = 'Like most people I felt very lost and did not know what I wanted to do, but *spoilers* it was not law';
       alt = 'Me in front of the UCF sign';
       break;
     case 'certification':
